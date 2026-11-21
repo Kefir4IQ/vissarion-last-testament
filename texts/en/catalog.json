@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-11-21",
+  "source_profile": "https://www.booksie.com/portfolio-view/promisedword-265927",
+  "translator_profile": "promisedword",
+  "local_translation_texts": false,
+  "search_primary_language": "ru",
+  "books": [
+    {"id": "foundations", "ru_pdf": "../ru/Vissarion.Kniga_osnov.pdf", "en_title": "Book of Fundamentals", "url": null, "site_status": "not_found_in_profile"},
+    {"id": "appeals", "ru_pdf": "../ru/Vissarion.Kniga_obrashenii.pdf", "en_title": "Book of Addresses", "url": null, "site_status": "not_found_in_profile"},
+    {"id": "proclamation", "ru_pdf": "../ru/Vissarion.Predvozveshenie.pdf", "en_title": "Pre-Annunciation", "url": "https://www.booksie.com/594910-pre-annunciation-by-vissarion", "site_status": "finished"},
+    {"id": "commandments", "ru_pdf": "../ru/Vissarion.Zapovedi.pdf", "en_title": "Commandments", "url": "https://www.booksie.com/625714-commandments", "site_status": "finished"},
+    {"id": "prayer", "ru_pdf": "../ru/Vissarion.Molitva.pdf", "en_title": "The Prayer", "url": "https://www.booksie.com/601587-the-prayer-by-vissarion", "site_status": "finished"},
+    {"id": "hope", "ru_pdf": "../ru/Vissarion.PoslednaNadejda.pdf", "en_title": "The Last Hope", "url": "https://www.booksie.com/594411-the-last-hope-by-vissarion", "site_status": "finished"},
+    {"id": "turn", "ru_pdf": "../ru/Vissarion.Vremja.Povorota.pdf", "en_title": "Pivotal Time", "url": "https://www.booksie.com/601038-pivotal-time-by-vissarion", "site_status": "in_progress"}
+  ]
+}
