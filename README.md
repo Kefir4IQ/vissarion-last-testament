@@ -6,6 +6,8 @@
 
 [Английские переводы на Booksie](docs/english-sources.md) включены как каталог внешних публикаций с указанием переводчика, без копирования их полного текста.
 
+[English source library](texts/en/README.md) maps all seven Russian books to available English publications and marks missing or incomplete translations.
+
 ## Начать чтение
 
 | Вопрос | Куда перейти |
