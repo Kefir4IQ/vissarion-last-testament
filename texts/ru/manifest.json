@@ -1,0 +1,44 @@
+{
+  "foundations": {
+    "file": "Vissarion.Kniga_osnov.pdf",
+    "pdf_pages": 22,
+    "size_bytes": 313308,
+    "sha256": "7d798f0ac71aac1bd22d1f6df6db8f6599a9f4dd067ceefaff20affadbcf0664"
+  },
+  "appeals": {
+    "file": "Vissarion.Kniga_obrashenii.pdf",
+    "pdf_pages": 101,
+    "size_bytes": 1042776,
+    "sha256": "2c144076cc32b231579db9d35cefd3454ad00934127db76a93473f5f837f941a"
+  },
+  "proclamation": {
+    "file": "Vissarion.Predvozveshenie.pdf",
+    "pdf_pages": 8,
+    "size_bytes": 113257,
+    "sha256": "d6dc016bdf000594adbfe88eae406a022eb9cdbc46015708a09b90abdeb8fe7a"
+  },
+  "commandments": {
+    "file": "Vissarion.Zapovedi.pdf",
+    "pdf_pages": 7,
+    "size_bytes": 134231,
+    "sha256": "c0ab668be46c23ca4cd9ddc0e0370d552878ee5c8633b3800cde591a45d1436b"
+  },
+  "prayer": {
+    "file": "Vissarion.Molitva.pdf",
+    "pdf_pages": 1,
+    "size_bytes": 62424,
+    "sha256": "f407f88650ca5840bb7000ddb996607d53a507983a91fa2cc13dcf0e1ae788b9"
+  },
+  "hope": {
+    "file": "Vissarion.PoslednaNadejda.pdf",
+    "pdf_pages": 138,
+    "size_bytes": 812227,
+    "sha256": "4f86b6c46f54ee47efd34e8a79a9f558df7a4aac31fab4257e9d3c1b055c8354"
+  },
+  "turn": {
+    "file": "Vissarion.Vremja.Povorota.pdf",
+    "pdf_pages": 100,
+    "size_bytes": 727922,
+    "sha256": "092c622cad7e9ee09781094569f7f3a06e8db3e56993f568e69c112244159b17"
+  }
+}

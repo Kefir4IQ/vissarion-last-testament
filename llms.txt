@@ -1,0 +1,26 @@
+# Последний Завет. Учебный корпус семи книг Слова Виссариона
+
+> Русскоязычный справочник о душе, Боге, смысле жизни и духовном развитии в семи текстах Виссариона. Учебные пересказы сопровождаются ссылками на исходные места. Хроники Свершения относятся к отдельному проекту.
+
+## Основные страницы
+
+- [Введение](docs/overview.md)
+- [Реестр источников, главы и издания](docs/sources.md)
+- [Русские PDF-оригиналы](texts/ru/README.md)
+- [English translations by promisedword on Booksie](docs/english-sources.md)
+- [Учебный курс](docs/course.md)
+- [Категории и понятия](docs/concepts.md)
+- [Карта связей](docs/relations.md)
+- [Сопоставления книг](docs/comparisons.md)
+- [Вопросы и ответы](docs/questions.md)
+
+## Машиночитаемые материалы
+
+- [Инструкции архивариуса](AGENTS.md)
+- [База знаний](knowledge/corpus.json)
+- [Схема базы](knowledge/corpus.schema.json)
+- [Учебные карточки с координатами](docs/evidence.md)
+- [Интеграция](docs/integration.md)
+- [Instructions for multilingual agents](AGENTS.multilingual.md)
+- [Paste-ready universal agent instructions](AGENTS.universal.md)
+- [Universal language adapter and usage](docs/multilingual.md)

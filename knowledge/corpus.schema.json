@@ -1,0 +1,328 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/posledniy-zavet/corpus.schema.json",
+  "title": "Учебный корпус семи книг Слова Виссариона",
+  "description": "Структурная схема. Семантические проверки ссылок, страниц и идентификаторов выполняет tools/corpus.py verify.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "title",
+    "language",
+    "scope",
+    "categories",
+    "books",
+    "evidence",
+    "concepts",
+    "relations",
+    "questions"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "language": {
+      "const": "ru"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "categories": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "books": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/book"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "concepts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/concept"
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relation"
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/question"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "pages": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "integer",
+          "minimum": 1
+        },
+        {
+          "type": "integer",
+          "minimum": 1
+        }
+      ],
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "book": {
+      "type": "object",
+      "required": [
+        "title",
+        "file",
+        "pages",
+        "overview"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pages": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "chapters": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "overview": {
+          "type": "string",
+          "minLength": 1
+        },
+        "public_url": {
+          "type": "string"
+        },
+        "printed_offset": {
+          "type": "integer"
+        },
+        "printed_from_pdf_page": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "book",
+        "pdf_pages"
+      ],
+      "properties": {
+        "book": {
+          "enum": [
+            "foundations",
+            "appeals",
+            "proclamation",
+            "commandments",
+            "prayer",
+            "hope",
+            "turn"
+          ]
+        },
+        "pdf_pages": {
+          "$ref": "#/$defs/pages"
+        },
+        "chapter": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "printed_pages": {
+          "$ref": "#/$defs/pages"
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "required": [
+        "id",
+        "kind",
+        "source",
+        "title",
+        "summary"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "paraphrase",
+            "navigation"
+          ]
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "concept": {
+      "type": "object",
+      "required": [
+        "id",
+        "label",
+        "category",
+        "aliases",
+        "definition",
+        "evidence"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "definition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "$ref": "#/$defs/ids"
+        }
+      },
+      "additionalProperties": false
+    },
+    "relation": {
+      "type": "object",
+      "required": [
+        "id",
+        "from",
+        "predicate",
+        "to",
+        "kind",
+        "explanation",
+        "evidence"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "from": {
+          "type": "string",
+          "minLength": 1
+        },
+        "predicate": {
+          "type": "string",
+          "minLength": 1
+        },
+        "to": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "Прямое указание",
+            "Сопоставление"
+          ]
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "$ref": "#/$defs/ids"
+        }
+      },
+      "additionalProperties": false
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "id",
+        "question",
+        "answer",
+        "kind",
+        "evidence"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "answer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "пересказ",
+            "сопоставление",
+            "вне корпуса"
+          ]
+        },
+        "evidence": {
+          "$ref": "#/$defs/ids"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
